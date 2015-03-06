@@ -1,7 +1,7 @@
 {
   "name": "validate.io-number-primitive-array",
   "version": "0.0.0",
-  "description": "Validates if a value is an array of primitive numbers.",
+  "description": "Validates if a value is an array of primitive numbers, excluding NaN.",
   "author": {
     "name": "Athan Reines",
     "email": "kgryte@gmail.com"
@@ -26,12 +26,23 @@
     "validate.io",
     "validate",
     "validation",
-    "validator"
+    "validator",
+    "valid",
+    "number",
+    "array",
+    "numberarray",
+    "numericarray",
+    "is",
+    "isarray",
+    "isnumberarray",
+    "primitive"
   ],
   "bugs": {
     "url": "https://github.com/validate-io/number-primitive-array/issues"
   },
-  "dependencies": {},
+  "dependencies": {
+    "validate.io-array": "^1.0.3"
+  },
   "devDependencies": {
     "chai": "2.x.x",
     "mocha": "2.x.x",

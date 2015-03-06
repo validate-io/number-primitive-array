@@ -17,18 +17,42 @@ For use in the browser, use [browserify](https://github.com/substack/node-browse
 ## Usage
 
 ``` javascript
-var foo = require( 'validate.io-number-primitive-array' );
+var isNumberArray = require( 'validate.io-number-primitive-array' );
 ```
 
-#### foo( value )
+#### isNumberArray( value )
 
-What does this function do?
+Validates if a `value` is an `array` of `number` primitives, __excluding__ NaN.
+
+``` javascript
+var arr = [1,2,3];
+
+var bool = isNumberArray( arr );
+// returns true
+```
+
+__Note__: the method will return `false` for an empty `array`.
 
 
 ## Examples
 
 ``` javascript
-var foo = require( 'validate.io-number-primitive-array' );
+var isNumberArray = require( 'validate.io-number-primitive-array' );
+
+console.log( isNumberArray( [1,2,3] ) );
+// returns true
+
+console.log( isNumberArray( [ new Number( 1 ) ] ) );
+// returns false
+
+console.log( isNumberArray( [] ) );
+// returns false
+
+console.log( isNumberArray( [ NaN ] ) );
+// returns false
+
+console.log( isNumberArray( ['a','b','c'] ) );
+// returns false
 ```
 
 To run the example code from the top-level application directory,
